@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Drupal Coder - web development on drupal</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+
+  <script defer src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script defer src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script defer src="https://unpkg.com/redux@4.0.5/dist/redux.js" crossorigin></script>
+  <script defer src="https://unpkg.com/react-redux@7.2.2/dist/react-redux.min.js" crossorigin></script>
+  <script defer src="https://unpkg.com/@reduxjs/toolkit@1.5.0/dist/redux-toolkit.umd.js" crossorigin></script>
+  <script defer src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script defer src="https://unpkg.com/formik@1.5.8/dist/formik.umd.production.js"></script>
+
+</head>
+
+<body>
+  <div class="navbar-absolute">
+    <div class="container-md">
+      <nav class="navbar navbar-expand-md">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="navigation-item">
+              <a class="nav-link" href="">ПОДДЕРЖКА DRUPAL</a>
+            </li>
+            <li class="navigation-item dropdown">
+              <a class="nav-link dropdown-toggle" href="">
+                АДМИНИСТРИРОВАНИЕ
+              </a>
+              <div class="dropdown-menu dropdown-menu-1">
+                <a class="dropdown-item" href="">МИГРАЦИЯ</a>
+                <a class="dropdown-item" href="">БЭКАПЫ</a>
+                <a class="dropdown-item" href="">АУДИТ БЕЗОПАСНОСТИ</a>
+                <a class="dropdown-item" href="">ОПТИМИЗАЦИЯ СКОРОСТИ</a>
+                <a class="dropdown-item" href="">ПЕРЕЕЗД НА HTTPS</a>
+              </div>
+            </li>
+            <li class="navigation-item">
+              <a class="nav-link" href="">ПРОДВИЖЕНИЕ</a>
+            </li>
+            <li class="navigation-item">
+              <a class="nav-link" href="">РЕКЛАМА</a>
+            </li>
+            <li class="navigation-item dropdown">
+              <a class="nav-link dropdown-toggle" href="">О НАС</a>
+              <div class="dropdown-menu dropdown-menu-2">
+                <a class="dropdown-item" href="">КОМАНДА</a>
+                <a class="dropdown-item" href="">DRUPALGIVE</a>
+                <a class="dropdown-item" href="">БЛОГ</a>
+                <a class="dropdown-item" href="">КУРСЫ DRUPAL</a>
+              </div>
+            </li>
+            <li class="navigation-item">
+              <a class="nav-link" href="">ПРОЕКТЫ</a>
+            </li>
+            <li class="navigation-item">
+              <a class="nav-link" href="">КОНТАКТЫ</a>
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand" href="">
+          <img class="nav-icon" src="./img/drupal-coder.svg" alt="navigation" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+  </div>
+  <div id="main">
+    <div id="react-block"></div>
+    <header>
+      <div id="video-block">
+        <div id="video-filter"></div>
+        <video class="video-background"
+          src="https://res.cloudinary.com/dpyzh619e/video/upload/v1606770179/video_bjr0b7.mp4" playsinline=""
+          autoplay="autoplay" loop="" preload="auto" muted="">
+        </video>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="bars-title">
+              Поддержка<br>сайтов на Drupal
+            </h1>
+            <div class="sub-title">
+              Сопровождение и поддержка сайтов<br>
+              на CMS Drupal любых версий и запущенности
+            </div>
+            <a href="#rates" class="rate-button">ТАРИФЫ</a>
+          </div>
+          <div class="col-md-6">
+            <div class="row redline-text-blocks">
+              <div class="col-sm-4 col-6 redline-box">
+                <div class="redline">
+                  <div class="redline-title">
+                    #1
+                    <img src="./img/cup.png" alt="#1" />
+                  </div>
+                  <div class="redline-text">
+                    Drupal-разработчик <br> в России по версии <br> Рейтинга Рунета
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-6 redline-box">
+                <div class="redline">
+                  <div class="redline-title">3+</div>
+                  <div class="redline-text">
+                    средний опыт <br> специалистов более<br> 3 лет
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-6 redline-box">
+                <div class="redline">
+                  <div class="redline-title">14</div>
+                  <div class="redline-text">
+                    лет опыта в сфере Drupal
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-6 redline-box">
+                <div class="redline">
+                  <div class="redline-title">50+</div>
+                  <div class="redline-text">
+                    модулей и тем <br> в формате DrupalGive
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-6 redline-box">
+                <div class="redline">
+                  <div class="redline-title">90 000</div>
+                  <div class="redline-text">
+                    часов поддержки <br> сайтов на Drupal
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-6 redline-box">
+                <div class="redline">
+                  <div class="redline-title">300+</div>
+                  <div class="redline-text">
+                    Проектов <br> на поддержке
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="competencies">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>
+              13 лет совершенствуем <br> компетенции в Durpal <br> поддержке!
+            </h2>
+            <div class="competencies-top-text">
+              Разрабатываем и оптимизируем модули, расширяем <br> функциональность сайтов, обновляем дизайн
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 col-md-3 competency-unit">
+            <div class="competency-pic">
+              <img src="./img/competency-1.svg" alt="Компетенция-1" />
+            </div>
+            <div class="text">
+              Добавление <br> информации на сайт,<br> создание новых <br> разделов
+            </div>
+          </div>
+          <div class="col-6 col-md-3 competency-unit">
+            <div class="competency-pic">
+              <img src="./img/competency-2.svg" alt="Компетенция-2" />
+            </div>
+            <div class="text">
+              Разработка <br> и оптимизация <br> модулей сайта
+            </div>
+          </div>
+          <div class="col-6 col-md-3 competency-unit">
+            <div class="competency-pic">
+              <img src="./img/competency-3.svg" alt="Компетенция-3" />
+            </div>
+            <div class="text">
+              Интеграция с CRM, <br> 1C, платежными <br> системами, любыми <br> веб-сервисами
+            </div>
+          </div>
+          <div class="col-6 col-md-3 competency-unit">
+            <div class="competency-pic">
+              <img src="./img/competency-4.svg" alt="Компетенция-4" />
+            </div>
+            <div class="text">
+              Любые доработки <br> функционала <br> и дизайна
+            </div>
+          </div>
+          <div class="col-6 col-md-3 competency-unit">
+            <div class="competency-pic">
+              <img src="./img/competency-5.svg" alt="Компетенция-5" />
+            </div>
+            <div class="text">
+              Аудит и мониторинг <br> безопасности Drupal <br> сайтов
+            </div>
+          </div>
+          <div class="col-6 col-md-3 competency-unit">
+            <div class="competency-pic">
+              <img src="./img/competency-6.svg" alt="Компетенция-6" />
+            </div>
+            <div class="text">
+              Миграция, импорт <br> контента и апгрейд <br> Drupal
+            </div>
+          </div>
+          <div class="col-6 col-md-3 competency-unit">
+            <div class="competency-pic">
+              <img src="./img/competency-7.svg" alt="Компетенция-7" />
+            </div>
+            <div class="text">
+              Оптимизация <br> и ускорение <br> Drupal-сайтов
+            </div>
+          </div>
+          <div class="col-6 col-md-3 competency-unit">
+            <div class="competency-pic">
+              <img src="./img/competency-8.svg" alt="Компетенция-8" />
+            </div>
+            <div class="text">
+              Веб-маркетинг, <br> консультации <br> и работы по SEO
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="support">
+      <h2>
+        Поддержка<br>от Drupal-coder
+      </h2>
+      <div class="container">
+        <div class="row mx-0">
+          <div class="col-12 col-md-6 col-lg-3 support-item">
+            <div class="support-block">
+              <div class="support-digit">01.</div>
+              <div class="support-title">Постановка задачи по Email</div>
+              <div class="text">
+                Удобная и привычная модель постановки задач, при которой задачи фокусируются и никогда не теряются.
+              </div>
+              <div class="support-icon">
+                <img src="./img/support1.svg" alt="Постановка задачи" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 support-item">
+            <div class="support-block">
+              <div class="support-digit">02.</div>
+              <div class="support-title">Система Helpdesk – отчетность, прозрачность</div>
+              <div class="text">
+                Возможность посмотреть все заявки в работе и отработанные часы в личном кабинете через браузер.
+              </div>
+              <div class="support-icon">
+                <img src="./img/support2.svg" alt="Система Helpdesk" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 support-item">
+            <div class="support-block">
+              <div class="support-digit">03.</div>
+              <div class="support-title">Расширенная техническая поддержка</div>
+              <div class="text">
+                Возможность организации расширенной техподдержки с 6:00 до 22:00 без выходных.
+              </div>
+              <div class="support-icon">
+                <img src="./img/support3.svg" alt="Тех. поддержка" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 support-item">
+            <div class="support-block">
+              <div class="support-digit">04.</div>
+              <div class="support-title">Персональный менеджер проекта</div>
+              <div class="text">
+                Ваш менеджер проекта всегда в курсе текущего состояния проекта и в любой момент готов ответить на любые
+                вопросы.
+              </div>
+              <div class="support-icon">
+                <img src="./img/support4.svg" alt="Персональный менеджер проекта" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 support-item">
+            <div class="support-block">
+              <div class="support-digit">05.</div>
+              <div class="support-title">Удобные способы оплаты</div>
+              <div class="text">
+                Безналичный расчет по договору или электронные деньги: WebMoney, Яндекс.Деньги, Paypal.
+              </div>
+              <div class="support-icon">
+                <img src="./img/support5.svg" alt="Удобные способы оплаты" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 support-item">
+            <div class="support-block">
+              <div class="support-digit">06.</div>
+              <div class="support-title">Работаем с SLA и NDA</div>
+              <div class="text">
+                Работа в рамках соглашений о конфиденциальности и об уровне качества работ.
+              </div>
+              <div class="support-icon">
+                <img src="./img/support6.svg" alt="Работаем с SLA и NDA" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 support-item">
+            <div class="support-block">
+              <div class="support-digit">07.</div>
+              <div class="support-title">Штатные специалисты</div>
+              <div class="text">
+                Надежные штатные специалисты, никаких фрилансеров.
+              </div>
+              <div class="support-icon">
+                <img src="./img/support7.svg" alt="Штатные специалисты" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 support-item">
+            <div class="support-block">
+              <div class="support-digit">08.</div>
+              <div class="support-title">Удобные каналы связи</div>
+              <div class="text">
+                Консультации по телефону, скайпу, в месенджерах .
+              </div>
+              <div class="support-icon">
+                <img src="./img/support8.svg" alt="Удобные каналы связи" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="laptop">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6 block-redlines">
+            <div class="row redline-text-blocks">
+              <div class="col-12">
+                <h2>
+                  Экспертиза в Drupal,<br> опыт 14 лет!
+                </h2>
+              </div>
+              <div class="col-md-6 col-12 redline-box">
+                <div class="redline">
+                  <div class="redline-text">
+                    Только системный подход - контроль версий, резервирование и тестирование!
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 redline-box">
+                <div class="redline">
+                  <div class="redline-text">
+                    Только Drupal сайты, не берем на поддержку сайты других CMS!
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 redline-box">
+                <div class="redline">
+                  <div class="redline-text">
+                    Участвуем в разработке ядра Drupal и модулей на Drupal.org, разрабатываем
+                    <a href="">свои модули Drupal</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 redline-box">
+                <div class="redline">
+                  <div class="redline-text">
+                    Поддерживаем сайты на Drupal 5, 6, 7 and 8
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="laptop-pic">
+        <img src="./img/laptop.png" alt="Ноутбук" />
+      </div>
+    </section>
+    <section class="rates" id="rates">
+      <h2>
+        Тарифы
+      </h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 order-1 rate-col">
+            <div class="rate-unit">
+              <div class="rate-name">Стартовый</div>
+              <ul>
+                <li>Консультации и работы по SEO</li>
+                <li>Услуги дизайнера</li>
+                <li>Неиспользованные оплаченные часы переносятся на следующий месяц</li>
+                <li>Предоплата от 6 000 рублей в месяц</li>
+              </ul>
+              <button id="contact-button-1" class="contact-button">СВЯЖИТЕСЬ С НАМИ!</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 order-3 rate-col">
+            <div class="rate-unit">
+              <div class="rate-name">VIP</div>
+              <ul>
+                <li>Консультации и работы по SEO</li>
+                <li>Услуги дизайнера</li>
+                <li>Максимальное время реакции - в день обращения</li>
+                <li>Неиспользованные оплаченные часы не переносятся</li>
+                <li>Предоплата от 270 000 рублей в месяц</li>
+              </ul>
+              <button id="contact-button-2" class="contact-button">СВЯЖИТЕСЬ С НАМИ!</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 order-2 rate-col main-rate">
+            <div class="rate-unit">
+              <div class="rate-name">Бизнес</div>
+              <ul>
+                <li>Консультации и работы по SEO</li>
+                <li>Услуги дизайнера</li>
+                <li>Высокое время реакции - до 2 рабочих дней</li>
+                <li>Неиспользованные оплаченные часы не переносятся</li>
+                <li>Предоплата от 30 000 рублей в месяц</li>
+              </ul>
+              <button id="contact-button-3" class="contact-button">СВЯЖИТЕСЬ С НАМИ!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="individual-rate">
+        Вам не подходят наши тарифы? Оставьте заявку и мы <br> предложим вам индивидуальные условия!<br>
+        <a id="contact-button-4" class="call-form" href="">ПОЛУЧИТЬ ИНДИВИДУАЛЬНЫЙ ТАРИФ
+        </a>
+      </div>
+      <section class="quick-tasks">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 quick-tasks-title">
+              <h2>
+                Наши профессиональные разработчики <br> выполняют быстро любые задачи
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-4 competency-unit">
+              <div class="text">
+                <div class="competency-pic">
+                  <img src="./img/competency-20.svg" alt="Task-1" />
+                </div>
+                <div class="time">от 1ч</div>
+                <div>Настройка события GA<br>в интернет-магазине</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 competency-unit">
+              <div class="text">
+                <div class="competency-pic">
+                  <img src="./img/competency-21.svg" alt="Task-2" />
+                </div>
+                <div class="time">от 20ч</div>
+                <div>Разработка мобильной<br>версии сайта</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4 competency-unit">
+              <div class="text">
+                <div class="competency-pic">
+                  <img src="./img/competency-22.svg" alt="Task-3" />
+                </div>
+                <div class="time">от 8ч</div>
+                <div>Интеграция <br> модуля оплаты</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <div class="team-unit">
+            <div class="row">
+              <h2 class="col-12">
+                Команда
+              </h2>
+              <div class="col-6 col-sm-6 col-md-4 members-unit">
+                <div class="members-panel">
+                  <div class="members-picture">
+                    <img src="./img/IMG_2472_0.jpg?itok=Fyg_7Erv" alt="Фото члена команды" width="280" height="280"
+                      class="pic-adaptive" />
+                  </div>
+                  <div class="members-name">Сергей Синица</div>
+                  <div class="members-function">Руководитель отдела веб-разработки, канд.техн. наук, заместитель
+                    директора</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 members-unit">
+                <div class="members-panel">
+                  <div class="members-picture">
+                    <img src="./img/IMG_2539_0.jpg?itok=UIjLIj5Z" alt="Фото члена команды" width="280" height="280"
+                      class="pic-adaptive" />
+                  </div>
+                  <div class="members-name">Роман Агабеков</div>
+                  <div class="members-function">Руководитель отдела DevOPS, директор</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 members-unit">
+                <div class="members-panel">
+                  <div class="members-picture">
+                    <img src="./img/IMG_2474_1.jpg?itok=wEUr4Wxc" alt="Фото члена команды" width="280" height="280"
+                      class="pic-adaptive" />
+                  </div>
+                  <div class="members-name">Алексей Синица</div>
+                  <div class="members-function">Руководитель отдела поддержки сайтов</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 members-unit">
+                <div class="members-panel">
+                  <div class="members-picture">
+                    <img src="./img/IMG_2522_0.jpg?itok=R9PN9U4d" alt="Фото члена команды" width="280" height="280"
+                      class="pic-adaptive" />
+                  </div>
+                  <div class="members-name">Дарья Бочкарёва</div>
+                  <div class="members-function">Руководитель отдела продвижения, контекстной рекламы и контент-поддержки
+                    сайтов</div>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-4 members-unit">
+                <div class="members-panel">
+                  <div class="members-picture">
+                    <img src="./img/IMG_9971_16.jpg?itok=rH-9-ZmI" alt="Фото члена команды" width="280" height="280"
+                      class="pic-adaptive" />
+                  </div>
+                  <div class="members-name">Ирина Торкунова</div>
+                  <div class="members-function">Менеджер по работе с клиентами</div>
+                </div>
+              </div>
+            </div>
+            <div class="all-team"><a href="">ВСЯ КОМАНДА</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="container last-cases">
+        <h2>
+          Последние кейсы
+        </h2>
+        <div class="last-cases-table">
+          <a class="case-block" href="">
+            <div class="case-pic" style="background-image: url(./img/laptop_case_1.jpg)"></div>
+            <h3>
+              Настройка кэширования данных. Апгрейд сервера. Ускорение работы сайта в 30 раз!
+            </h3>
+            <div class="case-post-date">04.05.2020</div>
+            <div class="case-text">Влияние скорости загрузки страниц сайта на отказы и конверсии. Кейс ускорения...
+            </div>
+          </a>
+          <a class="case-block fullscreen-case" href="">
+            <div class="case-pic" style="background-image: url(./img/laptop_case_2.jpg)"></div>
+            <h3>
+              Использование отчетов Ecommerce в Яндекс.Метрике
+            </h3>
+          </a>
+          <a class="case-block fullscreen-case" href="">
+            <div class="case-pic" style="background-image: url(./img/stat_case.jpg)"></div>
+            <h3>
+              Повышение конверсии страницы с формой заявки с применением AB-тестирования
+            </h3>
+            <div class="case-post-date">24.01.2020</div>
+          </a>
+          <a class="case-block fullscreen-case" href="">
+            <div class="case-pic" style="background-image: url(./img/speed_case.jpg)"></div>
+            <h3>
+              Drupal 7: ускорение времени генерации страниц интернет-магазина на 32%
+            </h3>
+            <div class="case-post-date">23.09.2019</div>
+          </a>
+          <a class="case-block" href="">
+            <div class="case-pic" style="background-image: url(./img/monitor_case.png)"></div>
+            <h3>
+              Обмен товарами и заказами интернет-магазинов на Drupal 7 с 1C: Предприятие, МойСклад, Класс365
+            </h3>
+            <div class="case-post-date">22.08.2019</div>
+            <div class="case-text">Опубликован <span class="case-href"> релиз модуля...</span></div>
+          </a>
+        </div>
+      </section>
+      <section class="reviews-warapper">
+        <div class="container reviews">
+          <h2>
+            Отзывы
+          </h2>
+          <div class="reviews-shadow">
+            <div class="reviews-block">
+              <div class="reviews-slider">
+                <div class="reviews-slide">
+                  <img src="./img/logo_0.png" alt="Ciel" />
+                  <div class="reviews-text">
+                    Долгие поиски единственного и неповторимого мастера на многострадальный сайт www.cielparfum.com,
+                    который был собран крайненекомпетентным программистом
+                    и раз в месяц стабильно грозил погибнуть, привели меня на сайт и, в итоге, к ребятам из
+                    Drupal-coder. И вот уже практически полгода, как не
+                    проходит и дня, чтобы я не поудивлялась и не порадовалась своему везению! <br> Починили все, что не
+                    работало - от поиска до отображения
+                    меню. Провели редизайн - не отходя от желаемого, но со своими существенными и качественными
+                    дополнениями. Осуществили ряд проектов - конкурсы,
+                    тесты и т.д. А уж мелких починок и доработок - не счесть! И главное - все качественно и быстро (не
+                    взирая на не самый "быстрый" тариф).
+                    Есть вопросы - замечательный Алексей всегда подскажет, поддержите, отремонтирует и/или просто
+                    сделает с нуля.
+                    Есть задумка для реализации - замечательный Сергей обсудит и предложит идеальный вариант. Есть
+                    проблема - замечательные Надежда и Роман починят, поправят,
+                    сделают! Ребята доказали, что эта CMS - мощная и грамотная система управления. Надеюсь, что наше
+                    сотрудничество затянется надолго! Спасибо!!!
+                  </div>
+                  <div class="reviews-author">
+                    С уважением, Наталья Сушкова руководитель Отдела веб-проектов Группы компаний &#171;Си Эль <br>
+                    парфюм&#187;
+                    <a href="http://www.cielparfum.com/">http://www.cielparfum.com/</a>
+                  </div>
+                </div>
+                <div class="reviews-slide">
+                  <img src="./img/logo.png" alt="Personal Writer" />
+                  <div class="reviews-text">
+                    Сергей - профессионал, высококвалифицированный
+                    программист с большим опытом работы в IT.
+                    Я общался с лучшими фрилансерами
+                    И я могу вам сказать, что они работали здесь с Сергеем.
+                    Я могу сказать, что они работали с Сергеем и у них получалось отлично. Мы все еще работаем с
+                    Сергеем.
+                    С ним приятно работать, я доволен.&nbsp;
+                  </div>
+                  <div class="reviews-author">
+                    Сергей Чепурко, project manager&nbsp;
+                    <a href="http://www.personal-writer.com/">www.personal-writer.com</a>
+                    &nbsp;/&nbsp;
+                    <a href="http://www.writers-united.org/">www.writers-united.org</a>
+                  </div>
+                </div>
+                <div class="reviews-slide">
+                  <img src="./img/cableman_ru.png" alt="Кабельщик" />
+                  <div class="reviews-text">
+                    За эти годы в нашей компании сменилось несколько
+                    команд программистов и специалистов технической поддержки, и
+                    мы почти отчаялись найти на российском рынке адекватное
+                    профессиональное предложение по разумной цене. Пока
+                    мы не начали работать с командой Initlab,
+                    которая является воплощением всех наших идей
+                    о нормальной системе взаимодействия в сочетании с
+                    профессиональной страстью. Впервые в моей
+                    деловая практика, я чувствую себя надежно защищенным
+                    наиболее важные задачи в жизни электронных СМИ, даже несмотря на
+                    что мои коллеги работают за сотни миль отсюда, и мы
+                    никогда не встречались лично.
+                  </div>
+                  <div class="reviews-author">
+                    Константин Бельский, заместитель генерального директора
+                    <a href="http://www.cableman.ru/">cabelman.ру</a>
+                  </div>
+                </div>
+                <div class="reviews-slide">
+                  <img src="./img/farbors_ru.jpg" alt="Строймаркеты то, что надо" />
+                  <div class="reviews-text">
+                    Я выражаю свою глубочайшую благодарность команде
+                    специалистов Initlab и лично Дмитрию
+                    Купянскому и Алексею Синице. Сайт был первоклассно
+                    преобразован из старой табличной модели в новую, основанную на
+                    Drupal, с дополнительной функциональностью. Все было
+                    сделано с высочайшим качеством и точно в срок. Всем
+                    , кто хочет развивать сайт без нервов и лишних вопросов
+                    , я рекомендую обратиться в эту команду
+                    профессионалов.
+                  </div>
+                  <div class="reviews-author">
+                    Леонид Александрович Ледовский
+                  </div>
+                </div>
+                <div class="reviews-slide">
+                  <img src="./img/logo-estee.png" alt="Estee" />
+                  <div class="reviews-text">
+                    Наша компания Estee Design занимается дизайном
+                    интерьеры. Сайт сделан на Drupal. Мы искали
+                    программистам для выполнения ряда небольших
+                    Изменения и доработки на сайте. После разговора с
+                    Алексеем Синицей, решил начать работать с
+                    компания drupal. Мы на 100% удовлетворены нашим сотрудничеством.
+                    на 100%. Четкая и понятная система общения,
+                    довольно быстрое решение поставленных задач. Они дали нам
+                    рекомендации по улучшению программной части сайта,
+                    исправлен ряд скрытых багов. Я никогда не пишу отзывов
+                    (нет времени), но в данном случае, по просьбе Алексея, я
+                    все таки решился и в данном случае я не могу не рекомендовать Initlab другим людям.
+                    Это действительно компания профессионалов.
+                  </div>
+                  <div class="reviews-author">
+                    Вадим Кузин, руководитель строительного направления бюро дизайна и интерьеров Estee
+                    <a href="http://estee-design.ru">estee-design.ru</a>
+                  </div>
+                </div>
+                <div class="reviews-slide">
+                  <img src="./img/logo_2.png" alt="Serebro" />
+                  <div class="reviews-text">
+                    За довольно длительный период времени (2014 - 2016)
+                    очень плотная работа. Только хорошие эмоции от работы в команде it lab
+                    / Drupal-coder: вы всегда можете рассчитывать на быструю и
+                    качественную помощь, поддержку, совет. Даже сейчас.
+                    Несмотря на то, что мы почти год не работали на постоянной
+                    на регулярной основе (банальное выполнение заданий), время от времени
+                    проблема с сайтом была решена мгновенно! В
+                    В общем, только самые искренние благодарности и
+                    рекомендации! Спасибо вам! )
+                  </div>
+                  <div class="reviews-author">
+                    С уважением, Владислав!
+                    <a href="http://serebro.ag">Serebro.Ag.</a>
+                  </div>
+                </div>
+                <div class="reviews-slide">
+                  <img src="./img/lpcma_rus_v4.jpg" alt="лаборотория" />
+                  <div class="reviews-text">
+                    Я хотел бы поблагодарить вас за вашу работу над нашими сайтами. За четыре
+                    месяца работы привели сайт в порядок, и самое главное
+                    у нас есть инструмент, который мы можем использовать для
+                    быстрого и красивого отображения контента для образования и
+                    работы с бизнесом
+                    http://lpcma.tsu.ru/ru/post/reference_material Очень многому
+                    научился, работая с вами. Мы очень рады, что
+                    удалось найти таких компетентных ребят)
+                  </div>
+                  <div class="reviews-author">
+                    Дмитрий Новиков
+                    <a href="http://lpcma.tsu.ru">lpcma.tsu.ru</a>
+                  </div>
+                </div>
+                <div class="reviews-slide">
+                  <img src="./img/nashagazeta_ch.png" alt="Наша газета" />
+                  <div class="reviews-text">
+                    Моя электронная газета www.nashagazeta.ch существует в
+                    Швейцарии уже десять лет. За это время мы сменили семь
+                    За это время мы сменили 7 специалистов технической поддержки, и только сейчас,
+                    только сейчас, за последние несколько месяцев, с начала сотрудничества с
+                    Алексей Синица и его команда, я впервые
+                    Только сейчас, когда я впервые сотрудничаю с Алексеем Синицей и его командой. Без каких-либо громких
+                    слов или обещаний, ребята просто
+                    спокойно и аккуратно выполняйте работу, быстро реагируйте,
+                    находят решения, предлагая конкретные варианты
+                    Улучшение сайта, и они оперативно
+                    внедряйте их оперативно. Сотрудничать с ними - одно удовольствие!
+                  </div>
+                  <div class="reviews-author">
+                    Надежда Сикорская, Женева, Швейцария
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-switch-block">
+                <button id="reviews-previous"></button>
+                <div class="reviews-display">
+                  <span id="reviews-number">01</span> / 08
+                </div>
+                <button id="reviews-next"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="work-with-us">
+        <h2>С нами работают</h2>
+        <div class="work-with-us-title">
+          Десятки компаний доверяют нам самое ценное, что у них есть в интернете - свои <br> сайты. Мы делаем всё, чтобы
+          наше сотрудничество было долгим
+        </div>
+        <div class="work-with-us-slider-1" id="wwu-slider-1" style="width: 100%">
+          <div class="work-with-us-slide">
+            <div><img src="./img/logo_0.png" alt="Ciel" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/kubsu.png" alt="Kubsu" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/rosatom.png" alt="Росатом" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/logo_2.png" alt="Serebro.Ag" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/logo_0.png" alt="Ciel" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/kubsu.png" alt="Kubsu" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/rosatom.png" alt="Росатом" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/logo_2.png" alt="Serebro.Ag" /></div>
+          </div>
+        </div>
+        <div class="work-with-us-slider-2" id="wwu-slider-2" style="width: 100%">
+          <div class="work-with-us-slide">
+            <div><img src="./img/nashagazeta_ch.png" alt="Наша газета" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/cableman_ru.png" alt="Кабельщик" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/logo-estee.png" alt="Estee" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/lpcma_rus_v4.jpg" alt="Лаборатория" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/nashagazeta_ch.png" alt="Наша газета" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/cableman_ru.png" alt="Кабельщик" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/logo-estee.png" alt="Estee" /></div>
+          </div>
+          <div class="work-with-us-slide">
+            <div><img src="./img/lpcma_rus_v4.jpg" alt="Лаборатория" /></div>
+          </div>
+        </div>
+      </section>
+      <section class="container faq">
+        <h2>FAQ</h2>
+        <div class="faq-enum">
+          <div>
+            <h3>
+              <span class="faq-one">1.</span>Кто непосредственно занимается поддержкой?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">2.</span>Как организована работа поддержки?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">3.</span>Что происходит, когда отработаны все предоплаченные часы за месяц?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">4.</span>Что происходит, когда не отработаны все предоплаченные часы за месяц?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">5.</span>Как происходит оценка и согласование планируемого времени на выполнение
+              заявок?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">6.</span>Сколько программистов выделяется за проект?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">7.</span>Как подать заявку на внесение изменений на сайте?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">8.</span>Как подать заявку на добавление пользователя, изменение настроек
+              веб-сервиса и других задач по администрированию?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">9.</span>В течении какого времени начинается работа по заявке?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">10.</span>В какое время работает поддержка?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">11.</span>Подходят ли услуги поддержки, если необходимо произвести обновление ядра
+              Drupal или модулей?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+          <div>
+            <h3>
+              <span class="faq-one">12.</span>Можно ли пообщаться со специалистом голосом или в мессенджере?
+            </h3>
+            <p>Сайты поддерживают штатные сотрудники ООО &#171; Инитлаб &#187;, г.Краснодар, прошедшие специальное
+              обучение и имеющие опыт работы с Друпал от 4 до 15 лет:
+              8 web-разработчиков, 2 специалиста по SEO, 4 системных администратора.
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-block">
+        <div class="container">
+          <div id="footer-phrase">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="connect-wrapper">
+                  <div class="connect-title">Оставить заявку на <br> поддержку сайта </div>
+                  <div class="connect-description">Срочно нужна поддержка сайта? Ваша команда не умпевает справиться
+                    самостоятельно или предыдущий подрядчик не справился
+                    с работой? Тогда вам точно к нам! Просто оставьте заявку и наш менеджер с вами свяжется!
+                  </div>
+                  <div class="connect-contacts">
+                    <ul>
+                      <li class="contacts-phone"><a href="">8 800 222-26-73</a></li>
+                      <li class="contacts-email"><a href="">info@drupal-coder.ru</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-block">
+                  <form id="footer-form" action="https://formcarry.com/s/adu1AdDRs76" method="POST">
+                    <input name="name" id="footer-name" type="text" class="footer-block-input" placeholder="Ваше имя"
+                      required />
+                    <input name="number" id="footer-number" type="text" class="footer-block-input" placeholder="Телефон"
+                      required />
+                    <input name="email" id="footer-email" type="email" class="footer-block-input" placeholder="E-mail"
+                      required />
+                    <textarea name="message" id="footer-message" placeholder="Ваш комментарий"
+                      class="footer-block-input"></textarea>
+                    <label for="footer-policy" class="chb-block">
+                      <input name="footer-policy" type="checkbox" class="chb" id="footer-policy" />
+                      <span class="chb-place"></span>
+                      <span>
+                        <span class="footer-checkbox-text">Отправляя заявку, я даю согласие на
+                          <a href="">обработку своих персональных данных</a>.
+                        </span>
+                      </span>
+                    </label>
+
+                    <input id="sendButton" type="submit" class="footer-contact-button" value="СВЯЖИТЕСЬ С НАМИ"
+                      disabled />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="socialnetwork-block-wrapper">
+            <div class="socialnetwork-block">
+              <div class="footer-links-wrapper">
+                <ul class="footer-links">
+                  <li class="footer-pic facebook"><a href=""><img src="./img/facebook_icon.png" alt="Facebook" /></a>
+                  </li>
+                  <li class="footer-pic vkontakte"><a href=""><img src="./img/vk_icon.png" alt="VK" /></a></li>
+                  <li class="footer-pic telegram"><a href=""><img src="./img/telegram_icon.png" alt="Telegram" /></a>
+                  </li>
+                  <li class="footer-pic youtube"><a href=""><img src="./img/youtube_icon.png" alt="Youtube" /></a></li>
+                </ul>
+              </div>
+              <p>Проект ООО &#171; Инитлаб &#187;, г.Краснодар, Россия.
+                <br>
+                Drupal является зарегестрированной торговой маркой Dries Buytaert.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</body>
+
+</html>
